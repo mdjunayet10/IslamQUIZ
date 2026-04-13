@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IslamicGPT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/web/styles.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-a"></div>
+    <div class="bg-orb orb-b"></div>
+
+    <main class="shell">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand-mark">AI</div>
+          <div>
+            <h1>IslamicGPT</h1>
+            <p>Qur'an, authentic Sunnah, and trusted classical sources only</p>
+          </div>
+        </div>
+      </header>
+
+      <section id="chat" class="chat" aria-live="polite"></section>
+
+      <form id="chat-form" class="composer" autocomplete="off">
+        <textarea
+          id="question"
+          name="question"
+          rows="2"
+          placeholder="Ask a question... (example: What does the Qur'an say about patience?)"
+          required
+        ></textarea>
+        <button id="send" type="submit">Send</button>
+      </form>
+    </main>
+
+    <template id="message-template">
+      <article class="msg">
+        <p class="role"></p>
+        <pre class="content"></pre>
+      </article>
+    </template>
+
+    <script src="/web/app.js" defer></script>
+  </body>
+</html>
